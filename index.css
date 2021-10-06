@@ -10,9 +10,19 @@ body{
     margin: auto;
 }
 
-h1, h3, p{
-    color:rgb(17, 17, 17);
-    font-family: 'Roboto', sans-serif;
+h1{
+
+    color: rgb(203, 218, 170);
+    font-family: 'Poppins', sans-serif ;
+}
+
+h3{
+    color: #598655;
+    font-family: 'Poppins', sans-serif ;
+}
+
+p{font-family: 'Poppins', sans-serif;
+color: rgb(255, 255, 255);
 }
 
 .chart{
