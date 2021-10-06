@@ -12,12 +12,12 @@ body{
 
 h1{
 
-    color: rgb(203, 218, 170);
+    color: rgb(0, 0, 0);
     font-family: 'Poppins', sans-serif ;
 }
 
 h3{
-    color: #598655;
+    color: #000000;
     font-family: 'Poppins', sans-serif ;
 }
 
@@ -33,4 +33,3 @@ color: rgb(255, 255, 255);
     border-radius: 5px;
     border-color: blue;
 }
-
