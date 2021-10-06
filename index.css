@@ -17,9 +17,9 @@ h1, h3, p{
 
 .chart{
     background-color: white;
-    width:330px;
-    border-width: 10px;
-    border-style: solid;
+    width:auto;
+    border-width: auto;
+    border-style: auto;
     border-radius: 5px;
     border-color: white;
 }
