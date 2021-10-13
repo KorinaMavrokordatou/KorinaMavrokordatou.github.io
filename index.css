@@ -5,7 +5,7 @@
 /* This is my first proper css file */
 
 body{
-    background-color: rgb(65, 42, 117);
+    background-color: rgb(41, 28, 66);
     max-width: 450px;
     margin: auto;
 }
@@ -28,8 +28,8 @@ color: rgb(255, 255, 255);
 .chart{
     background-color: white;
     width:auto;
-    border-width: auto;
-    border-style: auto;
-    border-radius: 5px;
-    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: auto;
+    border-color: rgb(142, 112, 192);
 }
