@@ -38,7 +38,7 @@
   ],
   "height": 300,
   "width": 300,
-  "mark": {"type": "line", "point": false},
+  "mark": {"type": "line", "point": true},
   "encoding": {
     "x": {
       "field": "TIME",
