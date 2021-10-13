@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "COVID-19: UK Upper Tier Local Authority",
+    "subtitle": [
+      "Number of new deaths of people who had had a positive test result for COVID-19",
+      "and died within 28 days of the first positive test (x), Publish Date (y)"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=utla&metric=newDeaths28DaysByPublishDate&format=csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": {"field": "areaName", "oneOf": ["Bradford", "Liverpool"]}}
+  ],
+  "height": 300,
+  "width": 300,
+  "mark": {"type": "line", "point": false},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Publish Date",
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "newDeaths28DaysByPublishDate",
+      "type": "quantitative",
+      "title": "Number of New Deaths",
+      "axis": {"grid": false}
+    },
+    "color": {
+      "field": "areaName",
+      "type": "nominal",
+      "scale": {"scheme": "dark2"},
+      "title": null,
+      "legend": {"orient": "top-right"}
+    }
+  },
+  "config": {}
+}
