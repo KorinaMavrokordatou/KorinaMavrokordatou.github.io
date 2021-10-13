@@ -5,19 +5,19 @@
 /* This is my first proper css file */
 
 body{
-    background-color: powderblue;
+    background-color: rgb(65, 42, 117);
     max-width: 450px;
     margin: auto;
 }
 
 h1{
 
-    color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.733);
     font-family: 'Poppins', sans-serif ;
 }
 
 h3{
-    color: #000000;
+    color: #ffffffa6;
     font-family: 'Poppins', sans-serif ;
 }
 
@@ -31,5 +31,5 @@ color: rgb(255, 255, 255);
     border-width: auto;
     border-style: auto;
     border-radius: 5px;
-    border-color: blue;
+    border-color: rgb(255, 255, 255);
 }
