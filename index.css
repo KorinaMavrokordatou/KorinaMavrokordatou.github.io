@@ -1,23 +1,21 @@
 
 
-
-
 /* This is my first proper css file */
 
 body{
-    background-color: rgb(41, 28, 66);
+    background-color: rgb(21, 21, 44);
     max-width: 450px;
     margin: auto;
 }
 
 h1{
 
-    color: rgba(255, 255, 255, 0.733);
+    color: rgb(240, 182, 73);
     font-family: 'Poppins', sans-serif ;
 }
 
 h3{
-    color: #ffffffa6;
+    color: #f7d2fa;
     font-family: 'Poppins', sans-serif ;
 }
 
@@ -28,8 +26,9 @@ color: rgb(255, 255, 255);
 .chart{
     background-color: white;
     width:auto;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-radius: auto;
-    border-color: rgb(142, 112, 192);
+    border-color: #a6bff5a6;
+    margin: auto;
 }
