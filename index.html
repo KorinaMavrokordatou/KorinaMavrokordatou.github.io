@@ -6,7 +6,44 @@
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
+<style> 
+  body {
+    margin: 0;
+  }
+  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #95b5fcd5;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
 
+li a {
+  display: block;
+  color: rgb(21, 21, 44);
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+}
+
+li a.active {
+  background-color: #f7d2fa);
+  color: rgb(21, 21, 44);
+  font-weight: 900;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+
+}
+
+  
+</style> 
   <link rel="stylesheet" href="index.css">
    <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -22,10 +59,17 @@
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 
-
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
 <body>
+  
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="project">Project</a></li>
+   
+  </ul>
+  <div style="margin-left:40%;padding:2px 30px;height:1000px;">
+    <!--Navigation bar and title-->
 
   <body>
   <h1>Korina Mavrokordatou: Data Visualisation Portfolio</h1>
