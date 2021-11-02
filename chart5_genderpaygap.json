@@ -55,7 +55,7 @@
     "color": {
       "field": "GEO",
       "type": "nominal",
-      "scale": {"scheme": "tableau20"},
+      "scale": {"scheme": "category20b"},
       "title": null,
       "legend": {"orient": "right"}
     }
