@@ -120,11 +120,21 @@ li a:hover:not(.active) {
 
  <!--Chart 5 -->
  <h4>Gender overall earnings gap, Central and Eastern Europe</h4>
- <p>This is my fifth chart which line charts for all Central and Eastern European countries, for the years 2010-2018. </p>
+ <p>This is my fifth chart which consists of line charts for all Central and Eastern European countries, for the years 2010-2018. </p>
  <div class="chart" id="chart5">
      <script>
        var myChart5 = "chart5_genderpaygap.json";
        vegaEmbed('#chart5', myChart5);
+     </script>
+ </div>
+    
+<!--Chart 6 -->
+ <h4>Number of species on "red list"</h4>
+ <p>This is my sixth chart, a bar chart showing endangered species. The data is "in-line" JSON, which I have manually written. The data (csv file) was downloaded from RDeconomist on Github. Then, using Vega-lite online, I recreated the chart. </p>
+ <div class="chart" id="chart6">
+     <script>
+       var myChart6 = "chart6_endangeredspecies.json";
+       vegaEmbed('#chart6', myChart6);
      </script>
  </div>
 
