@@ -1,0 +1,59 @@
+{
+  "title": {
+    "text": "Endangered species",
+    "subtitle": "Number of species on 'Red List'. Source: IUCN Summary Statistics",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "height": 300,
+  "width": 250,
+  "data": {
+    "values": [
+      {"Type": "Mammals", "Category": "Vertebrate", "Value": 1323},
+      {"Type": "Birds", "Category": "Vertebrate", "Value": 1481},
+      {"Type": "Reptiles", "Category": "Vertebrate", "Value": 1458},
+      {"Type": "Amphibians", "Category": "Vertebrate", "Value": 2442},
+      {"Type": "Fishes", "Category": "Vertebrate", "Value": 3210},
+      {"Type": "Insects", "Category": "Invertebrate", "Value": 1926},
+      {"Type": "Molluscs", "Category": "Invertebrate", "Value": 2305},
+      {"Type": "Crustaceans", "Category": "Invertebrate", "Value": 743},
+      {"Type": "Corals", "Category": "Invertebrate", "Value": 237},
+      {"Type": "Arachnids", "Category": "Invertebrate", "Value": 218}
+    ]
+  },
+  "mark": {"type": "bar", "color": "#86d0bb"},
+  "encoding": {
+    "y": {"field": "Type", "sort": "x", "title": ""},
+    "x": {
+      "aggregate": "sum",
+      "field": "Value",
+      "title": "Number of threatened species"
+    },
+    "color": {
+      "field": "Category",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#2e6b4f",
+          "#4db383",
+          "#71c29c",
+          "#71c29c",
+          "#71c29c",
+          "#71c29c",
+          "#71c29c",
+          "#71c29c",
+          ""
+        ]
+      },
+      "legend": {"orient": "top-right"}
+    },
+    "tooltip": [
+      {"field": "Type"},
+      {"field": "Value", "title": "Number of threatened species"},
+      {"field": "Category"}
+    ]
+  },
+  "config": {}
+}
