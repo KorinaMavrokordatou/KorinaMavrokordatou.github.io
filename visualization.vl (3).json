@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/chart7_data.csv"
+  },
+  "mark": "bar",
+  "width": {"step": 12},
+  "height": 300,
+  "title": {
+    "text": "International Student Statistics in UK, 2021",
+    "subtitle": [
+      "Number of international students pursuing degrees in UK universities from EU and Non-EU Countries, Data Source: Studying-in-UK.org"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "encoding": {
+    "column": {
+      "field": "University",
+      "sort": "ascending",
+      "type": "ordinal",
+      "spacing": 20,
+      "header": {
+        "titleOrient": "bottom",
+        "labelAngle": -90,
+        "labelBaseline": "bottom",
+        "labelOrient": "right"
+      }
+    },
+    "y": {
+      "type": "quantitative",
+      "field": "Value",
+      "title": "Number of international students",
+      "axis": {"grid": false}
+    },
+    "x": {"field": "Type", "axis": null, "scale": {"zero": false}},
+    "color": {
+      "field": "Type",
+      "scale": {"domain": ["EU", "Non-EU", "Total"], "scheme": "category20"},
+      "title": "Country:"
+    }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"domainWidth": 1},
+    "axisX": {"titleLimit": 100}
+  }
+}
