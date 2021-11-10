@@ -1,0 +1,36 @@
+{
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/chart7_data3.csv"
+  },
+  "mark": "bar",
+  "width": 250,
+  "height": 300,
+  "title": {
+    "text": "International Student Statistics in UK, 2021",
+    "subtitle": [
+      "Number of international students pursuing degrees in UK universities",
+      "from EU and Non-EU Countries."
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "encoding": {
+    "x": {
+      "field": "University",
+      "sort": "-y",
+      "type": "ordinal",
+      "title": "University"
+    },
+    "y": {"field": "Value", "title": null, "type": "quantitative"},
+    "color": {
+      "field": "Type",
+      "type": "nominal",
+      "legend": {"orient": "top-right"},
+      "scale": {"domain": ["EU", "Non-EU"], "scheme": "yellowgreenblue"},
+      "title": "Country:"
+    }
+  },
+  "config": {}
+}
