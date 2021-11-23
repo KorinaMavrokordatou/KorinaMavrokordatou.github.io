@@ -151,11 +151,21 @@ li a:hover:not(.active) {
     
          <!--Chart 8 -->
  <h4>Goals Scored in Football, Cyprus</h4>
- <p>This is my eighth chart, a scatter plot showing the number of goals scored in Cyprus 1st division league. The chart was created using an API key from SportsDataApi for which I requested access for. I manipulated the API link and changed the time-period to include the last season (21/08/2021-23/11/2021)
+ <p>This is my eighth chart, a scatter plot showing the number of goals scored in Cyprus 1st division league. The chart was created using an API key from SportsDataApi for which I requested access for. I manipulated the API link and changed the time-period to include the last season (21/08/2021-23/11/2021).</p>
  <div class="chart" id="chart8">
      <script>
        var myChart8 = "chart8_cyprusfootball.json";
        vegaEmbed('#chart8', myChart8);
+     </script>
+ </div>
+    
+             <!--Chart 9 -->
+ <h4>Ozone concentration, Portugal</h4>
+ <p>Pollution data using satellite imagary from emissions API. The chart makes two separate API calls, one to get Portugal data, and one to get the data for a specific point, in this case the coordinates for the city of Lisbon.</p>
+ <div class="chart" id="chart9">
+     <script>
+       var myChart9 = "chart9_ozonepollution.json";
+       vegaEmbed('#chart9', myChart9);
      </script>
  </div>
 
