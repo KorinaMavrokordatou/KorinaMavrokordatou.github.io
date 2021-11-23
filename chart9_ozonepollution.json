@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Pollution data using satellite imagary from emissions API. The chart makes two separate API calls, one to get Portugal data, and one to get the data for a specific point, in this case the coordinates for the city of Lisbon.",
+  "title": {
+    "text": "Ozone - Portugal vs Lisbon",
+    "subtitle": "Average daily Ozone concentration for Portugal (grey) and Lisbon (green)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {"field": "end", "type": "temporal", "title": null},
+    "y": {
+      "field": "average",
+      "type": "quantitative",
+      "scale": {"domain": [0.08, 0.25]},
+      "title": null
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://api.v2.emissions-api.org/api/v2/ozone/average.json?country=pt&begin=2010-02-01&end=2030-01-01"
+      },
+      "mark": {"type": "circle", "color": "gray", "opacity": 0.5}
+    },
+    {
+      "data": {
+        "url": "https://api.v2.emissions-api.org/api/v2/ozone/average.json?point=38.7222%2C9.1393&begin=2019-02-10&end=2030-01-01&limit=100&offset=0"
+      },
+      "mark": {"type": "circle", "color": "darkseagreen", "opacity": 0.7}
+    }
+  ],
+  "config": {}
+}
