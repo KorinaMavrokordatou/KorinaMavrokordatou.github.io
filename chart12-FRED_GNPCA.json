@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "US Real gross national product",
+  "title": {
+    "text": "US Real Gross National Product",
+    "subtitle": [
+      "Billions of Chained 2012 Dollars, Not Seasonally Adjusted. Source: U.S. Bureau of",
+      "Economic Analysis"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/data_FRED-GNPCA.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "height": 300,
+  "width": 350,
+  "mark": {"type": "line", "point": false, "color": "#df0a0a"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": null, "grid": false, "labelSeparation": 10}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "scale": {"domain": [0, 20000]},
+      "axis": {"grid": false}
+    }
+  },
+  "config": {}
+}

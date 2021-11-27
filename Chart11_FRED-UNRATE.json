@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "The unemployment rate represents the number of unemployed as a percentage of the labor force. Labor force data are restricted to people 16 years of age and older, who currently reside in 1 of the 50 states or the District of Columbia, who do not reside in institutions (e.g., penal and mental facilities, homes for the aged), and who are not on active duty in the Armed Forces.",
+  "title": {
+    "text": "US Unemployment Rate",
+    "subtitle": [
+      "Percent, Seasonally Adjusted. Source: Source: U.S. Bureau of Labor Statistics"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/data_FRED-UNRATE.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "height": 300,
+  "width": 350,
+  "mark": {"type": "line", "point": false, "color": "#2953db"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": null, "grid": false, "labelSeparation": 10}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "scale": {"domain": [0, 16]},
+      "axis": {"grid": false}
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "The Industrial Production Index (INDPRO) is an economic indicator that measures real output for all facilities located in the United States manufacturing, mining, and electric, and gas utilities (excluding those in U.S. territories).",
+  "title": {
+    "text": "Industrial Production: Total Index",
+    "subtitle": [
+      "Index 2017=100, Seasonally Adjusted. Source: Board of Governors of the Federal",
+      "Reserve System (US)"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/data_FRED-INDPRO.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "height": 300,
+  "width": 350,
+  "mark": {"type": "line", "point": false, "color": "seagreen"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": null, "grid": false, "labelSeparation": 10}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "scale": {"domain": [0, 120]},
+      "axis": {"grid": false}
+    }
+  },
+  "config": {}
+}
