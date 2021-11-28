@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Percentage of adults with some form of depression by age and sex, Great Britain, 27 January to 7 March 2021",
+  "title": {
+    "text": "Coronavirus and depression in adults, Great Britain: January to March 2021",
+    "subtitle": [
+      "Analysis of the proportion of the British adult population experiencing some form of depression in early 2021,",
+      "by age and sex. Data Source: Office for National Statistics"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start"
+  },
+  "height": 300,
+  "width": 350,
+  "background": "floralwhite",
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/depressionstats.csv"
+  },
+  "mark": {"type": "line", "point": {"filled": false, "fill": "white"}},
+  "encoding": {
+    "x": {
+      "type": "nominal",
+      "field": "Age",
+      "axis": {"labelAngle": 0},
+      "title": null
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Proportion of Adults, %",
+      "axis": {"grid": false}
+    },
+    "color": {"field": "Sex", "type": "nominal", "scale": {"scheme": "accent"}}
+  },
+  "config": {}
+}
