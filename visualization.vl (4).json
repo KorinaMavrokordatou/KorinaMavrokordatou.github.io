@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "title": {
+    "text": "University League Tables 2022",
+    "subtitle": [
+      "Overall University Score based on Entry Standards, Student Satisfaction, Reasearch Quality",
+      "and Graduate Prospects. Data Source: https://www.thecompleteuniversityguide.co.uk"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "center"
+  },
+  "height": 300,
+  "width": 350,
+  "mark": {"type": "bar", "point": false, "color": "skyblue", "width": 25},
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/overall_rankings_uk%20(2).csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "0",
+      "type": "nominal",
+      "axis": {"labelAngle": -75},
+      "title": null,
+      "sort": "-y"
+    },
+    "y": {"field": "1", "type": "quantitative", "title": "Overall Score, %"}
+  },
+  "config": {}
+}
