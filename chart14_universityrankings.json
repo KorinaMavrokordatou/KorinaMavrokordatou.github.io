@@ -25,7 +25,7 @@
       "title": null,
       "sort": "-y"
     },
-    "y": {"field": "1", "type": "quantitative", "title": "Overall Score, %"}
+    "y": {"field": "1", "type": "quantitative", "title": "Overall Score, %",   "axis": {"grid": false}}
   },
   "config": {}
-}
+} 
