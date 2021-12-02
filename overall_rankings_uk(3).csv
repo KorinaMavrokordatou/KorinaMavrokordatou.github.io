@@ -1,0 +1,51 @@
+,university,score,type
+0,University of Oxford,100,overallscore
+1,University of Cambridge,99,overallscore
+2,London School of Economics and Poli...,96,overallscore
+3,University of St Andrews,95,overallscore
+4,Imperial College London,90,overallscore
+5,Durham University,89,overallscore
+6,Loughborough University,87,overallscore
+7,UCL (University College London),85,overallscore
+8,University of Warwick,84,overallscore
+9,University of Bath,84,overallscore
+0,University of Oxford,96,entrystandards
+1,University of Cambridge,99,entrystandards
+2,London School of Economics and Poli...,85,entrystandards
+3,University of St Andrews,100,entrystandards
+4,Imperial College London,93,entrystandards
+5,Durham University,88,entrystandards
+6,Loughborough University,72,entrystandards
+7,UCL (University College London),89,entrystandards
+8,University of Warwick,78,entrystandards
+9,University of Bath,81,entrystandards
+0,University of Oxford,n/a,studentsatisfaction
+1,University of Cambridge,n/a,studentsatisfaction
+2,London School of Economics and Poli...,80,studentsatisfaction
+3,University of St Andrews,86,studentsatisfaction
+4,Imperial College London,80,studentsatisfaction
+5,Durham University,80,studentsatisfaction
+6,Loughborough University,84,studentsatisfaction
+7,UCL (University College London),79,studentsatisfaction
+8,University of Warwick,81,studentsatisfaction
+9,University of Bath,81,studentsatisfaction
+0,University of Oxford,83,researchquality
+1,University of Cambridge,83,researchquality
+2,London School of Economics and Poli...,84,researchquality
+3,University of St Andrews,78,researchquality
+4,Imperial College London,84,researchquality
+5,Durham University,78,researchquality
+6,Loughborough University,74,researchquality
+7,UCL (University College London),80,researchquality
+8,University of Warwick,81,researchquality
+9,University of Bath,79,researchquality
+0,University of Oxford,90,graduateprospects
+1,University of Cambridge,90,graduateprospects
+2,London School of Economics and Poli...,91,graduateprospects
+3,University of St Andrews,80,graduateprospects
+4,Imperial College London,95,graduateprospects
+5,Durham University,85,graduateprospects
+6,Loughborough University,83,graduateprospects
+7,UCL (University College London),85,graduateprospects
+8,University of Warwick,84,graduateprospects
+9,University of Bath,88,graduateprospects
