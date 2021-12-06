@@ -33,5 +33,5 @@
     },
     "color": {"field": "Sex", "type": "nominal", "scale": {"scheme": "accent"}}
   },
-  "config": {}
+  "config": {"legend": {"orient": "top-right"}}
 }
