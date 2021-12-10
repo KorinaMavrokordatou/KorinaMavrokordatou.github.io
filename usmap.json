@@ -41,7 +41,7 @@
   {"lon":-81.035, "lat":34, "state":"South Carolina", "city":"Columbia", "rank":"48"},
   {"lon":-100.336378, "lat":44.367966, "state":"South Dakota", "city":"Pierre", "rank":"24"},
   {"lon":-86.784, "lat":36.165, "state":"Tennessee", "city":"Nashville", "rank":"38"},
-  {"lon":-97.75, "lat":30.266667, "state":"Texas", "city":"Austin", "rank":"28", "1,739.61"},
+  {"lon":-97.75, "lat":30.266667, "state":"Texas", "city":"Austin", "rank":"28"},
   {"lon":-111.892622, "lat":40.7547, "state":"Utah", "city":"Salt Lake City", "rank":"41"},
   {"lon":-72.57194, "lat":44.26639, "state":"Vermont", "city":"Montpelier", "rank":"07"},
   {"lon":-77.46, "lat":37.54, "state":"Virginia", "city":"Richmond", "rank":"17"},
