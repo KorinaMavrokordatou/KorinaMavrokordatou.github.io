@@ -34,7 +34,7 @@
     "color": {
       "field": "Type",
       "scale": {"domain": ["EU", "Non-EU", "Total"], "scheme": "paired"},
-      "title": "From:"
+      "title": "Country:"
     }
   },
   "config": {"view": {"stroke": "transparent"}, "legend": {"orient": "top-left"}}
