@@ -52,6 +52,8 @@ li a:hover:not(.active) {
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.27.0"></script>
+
 
 </head>
 
@@ -60,7 +62,6 @@ li a:hover:not(.active) {
     <ul>
       <li><a href="index.html">Portfolio</a></li>
       <li><a class="active" href="project.html">Project</a></li>
-      <li><a href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io">Github</a></li>
      
     </ul>
     <div style="margin-left:40%;padding:2px 30px;height:1000px;">
@@ -73,6 +74,19 @@ li a:hover:not(.active) {
     
     <p>Project demo page text here.</p>
   
+    <!--Chart 20 -->
+<h4>1st chart</h4>
+<p>This is my first chart, an interactive chart showing the correlation in the US by state.</p>
+  <div class="chart" id="chart20">
+      <script>
+        //this is my first chart
+        var myChart20 = "world_map_rankings.json";
+        //yes
+        vegaEmbed('#chart20', myChart20);
+      </script>
+  </div>
+
 </body>
   
 </html>
+
