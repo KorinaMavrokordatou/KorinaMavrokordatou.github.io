@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "ghostwhite",
+  "title": {
+    "text": "Mental Health vs Social Media statistics, US",
+    "subtitle": [
+      "States with rankings 1-13 have lower prevalence of mental illness & higher rates of access to care for youth. States with rankings 39-51 indicate that youth have",
+      "higher prevalence of mental illness and lower rates of access to care. Data Sources: {https://www.mhanational.org/issues/ranking-states, https://data.census.gov} "
+    ],
+    "fontSize": 18,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle",
+    "color": "black",
+    "subtitleColor": "black"
+  },
+  "repeat": {
+    "row": ["Mental Health Ranking", "% of people using social media/state"]
+  },
+  "resolve": {"scale": {"color": "independent"}},
+  "spec": {
+    "width": 500,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/mental_health_rankings_us(1).csv"
+    },
+    "transform": [
+      {
+        "lookup": "id",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/us-10m.json",
+            "format": {"type": "topojson", "feature": "states"}
+          },
+          "key": "id"
+        },
+        "as": "geo"
+      }
+    ],
+    "projection": {"type": "albersUsa"},
+    "mark": "geoshape",
+    "encoding": {
+      "shape": {"field": "geo", "type": "geojson"},
+      "color": {"field": {"repeat": "row"}, "type": "quantitative"},
+      "tooltip": [
+        {"field": "state", "type": "nominal", "title": "State"},
+        {
+          "field": "Mental Health Ranking",
+          "type": "quantitative",
+          "title": "Mental Health Rank"
+        },
+        {
+          "field": "% of people using social media/state",
+          "type": "quantitative",
+          "title": "Social Media Rank"
+        }
+      ]
+    }
+  },
+  "config": {}
+}
