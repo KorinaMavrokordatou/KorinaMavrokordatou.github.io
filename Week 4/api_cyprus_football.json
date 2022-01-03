@@ -1,0 +1,66 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {"url": "https://app.sportdataapi.com/api/v1/soccer/matches?apikey=a2bf7e20-4bdc-11ec-95b0-3ded6d4e1aa4&season_id=2109",
+  "format":{
+    "type": "json",
+    "property": "data"
+  }
+  },
+ "background": "#89e4a77e",
+  "title": {
+    "text": "Cyprus 1st division: Goals scored at Home",
+    "subtitle": ["Goals scored at Home by Cyprus' 6 higher ranked teams from 21-08-2021 to present.", "Data Source: https://app.sportdataapi.com/api/", ""],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitleColor": "black",
+    "anchor": "middle",
+    "color": "black"
+  },
+
+  "transform": [
+    {"filter":{"field":"home_team.name", "oneOf": ["Apollon Limassol FC", "AC Omonia Nicosia", "AEK Larnaca FC", "Apoel Nicosia FC", "Anorthosis Famagusta FC", "AEL Limassol FC"]}}
+  ],
+
+  "mark": {
+    "type":"bar",
+    "cornerRadius": {"expr": "30"},
+    "color":"#97603b"},
+
+  "height":100,
+  "width":200,
+  "padding":{
+    "top":0,
+    "bottom":0,
+    "right":0,
+    "left":0
+  },
+  
+  "encoding": {
+
+    "x": {
+      "field": "match_start", 
+      "type": "temporal",
+      "title":null},
+
+    "y": {
+      "field": "stats.home_score", 
+      "type": "quantitative",
+      "title":null},
+
+     "facet":{
+       "field": "home_team.name",
+       "columns": 2,
+       "title":null,
+       "spacing":25,
+       "header": {
+         "labelColor": "black", "labelFontSize": 10, "labelFontWeight": "bold"}
+     } ,
+
+     "color": {"scale": {"scheme": "category10"},
+     "field": "home_team.name",
+     "legend": null
+     }
+  },
+  "config": {"axis": {"tickColor": "white"}, "axisX": {"grid": false}, "axisY": {"gridColor": "white"}}
+} 
