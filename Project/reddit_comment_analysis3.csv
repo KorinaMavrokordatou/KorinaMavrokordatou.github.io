@@ -1,10 +1,10 @@
-Number of comments,Sentiment,Method of analysis,Comment id,Comment,Sum
-77,Negatives,Textblob,1,My neighbor has a Black Lives matter sign in her front yard. Some crazy lady parks in the middle of the street and starts screaming ÒWhite Lives MatterÓ for half an hour. Had to put the hose on her.,359
-77,Negatives,Textblob,2,"Armed counter protesters show up and explain media bias. Why are Confederates not asked why they show up armed, but we are?",822
-33,Negatives,Textblob,3,Still relevant - this was posted on Twitter 7/29/2020,739
-12,Negatives,Textblob,4,ItÕs never too late,311
-22,Negatives,Textblob,5,This is the one,487
-32,Negatives,Textblob,6,Help spread this,1122
+Number of comments,Sentiment,Method of analysis,Comment id,Comment,Sum,Method
+77,Negatives,Textblob,1,My neighbor has a Black Lives matter sign in her front yard. Some crazy lady parks in the middle of the street and starts screaming ÒWhite Lives MatterÓ for half an hour. Had to put the hose on her.,359,Textblob
+77,Negatives,Textblob,2,"Armed counter protesters show up and explain media bias. Why are Confederates not asked why they show up armed, but we are?",822,Textblob
+33,Negatives,Textblob,3,Still relevant - this was posted on Twitter 7/29/2020,739,Textblob
+12,Negatives,Textblob,4,ItÕs never too late,311,Vlader
+22,Negatives,Textblob,5,This is the one,487,Vlader
+32,Negatives,Textblob,6,Help spread this,1122,Vlader
 33,Negatives,Textblob,7,This dude started a racist group on fb then once everyone posted something racist he screenshot it and sent it to their employers ______,
 41,Negatives,Textblob,8,This is sad BLM,
 15,Negatives,Textblob,9,Our new banner (in a VERY conservative town),
