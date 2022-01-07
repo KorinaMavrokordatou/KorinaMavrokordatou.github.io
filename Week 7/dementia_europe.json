@@ -1,1 +1,69 @@
-
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Dementia Rates 2018-2050, Europe",
+      "subtitle": [
+        "Source: https://www.alzheimer-europe.org/dementia/prevalence-dementia-europe",
+        ""
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/dementia_data%20(1).csv"
+    },
+    "background": "whitesmoke",
+    "vconcat": [
+      {
+        "width": 500,
+        "height": 100,
+        "mark": {"type": "bar", "color": "#1da1f8"},
+        "encoding": {
+          "x": {
+            "field": "Country",
+            "type": "nominal",
+            "axis": {"title": "", "grid": false}
+          },
+          "y": {
+            "field": "% of population in 2018",
+            "scale": {"domain": [0, 5]},
+            "type": "quantitative",
+            "axis": {"tickCount": 3, "grid": true}
+          },
+          "tooltip": [
+            {"field": "Country", "title": "Country", "type": "nominal"},
+            {
+              "field": "% of population in 2018",
+              "title": "Percentage",
+              "type": "quantitative"
+            }
+          ]
+        }
+      },
+      {
+        "width": 500,
+        "height": 100,
+        "mark": {"type": "bar", "color": "#285ae6"},
+        "encoding": {
+          "x": {"field": "Country", "type": "nominal"},
+          "y": {
+            "field": "% of population in 2050",
+            "type": "quantitative",
+            "scale": {"domain": [0, 5]},
+            "axis": {"tickCount": 3, "grid": true}
+          },
+          "tooltip": [
+            {"field": "Country", "title": "Country", "type": "nominal"},
+            {
+              "field": "% of population in 2050",
+              "title": "Percentage",
+              "type": "quantitative"
+            }
+          ]
+        }
+      }
+    ],
+    "config": {"bar": {"height": 50, "width": 14}}
+  }
