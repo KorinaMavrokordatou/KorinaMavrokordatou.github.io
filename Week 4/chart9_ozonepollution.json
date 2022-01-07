@@ -8,10 +8,10 @@
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "#000000",
-      "subtitleColor": "#000000"
+    "subtitleColor": "#000000"
   },
-  "width": 300,
-  "height": 300,
+  "width": 400,
+  "height": 400,
   "background": "#e0eafa",
   "encoding": {
     "x": {"field": "end", "type": "temporal", "title": null},
@@ -36,5 +36,11 @@
       "mark": {"type": "circle", "color": "#0b6132", "opacity": 0.5}
     }
   ],
-  "config": {"axis": {"gridColor": "ghostwhite", "tickColor": "forestgreen", "labelColor": "black"}}
-} 
+  "config": {
+    "axis": {
+      "gridColor": "ghostwhite",
+      "tickColor": "forestgreen",
+      "labelColor": "black"
+    }
+  }
+}
