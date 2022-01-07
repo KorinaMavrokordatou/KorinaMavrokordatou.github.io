@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Bitcoin exhange rate",
+  "title": {
+    "text": "Bitcoin echange rate to USD, 2021",
+    "subtitle": "Data from API using personal API key; Source: CoinAPI.",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#f6e7f7",
+    "subtitleColor": "#f6e7f7"
+      },
+  "data": {
+    "url": "https://rest.coinapi.io/v1/exchangerate/BTC/USD/history?period_id=8HRS&time_start=2021-10-01T00:00:00&limit=100&include_empty_items=false&apikey=974BD54A-0079-4734-8F1F-B97C4C2FDC3C"
+  },
+  "height": 300,
+  "width": 300,
+  "background": "black",
+  "encoding": {
+    "x": {
+      "field": "time_period_start",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "labelColor": "#c8aaff",
+        "tickColor": "pink",
+        "gridColor": "dimgrey"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": false,
+        "interpolate": "linear",
+        "color": "#eca918",
+        "tooltip":true,
+        "size":{"expr": "2.5"}
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_high",
+          "type": "quantitative",
+          "title": "High Rate",
+          "scale": {"domain": [40000, 70000]},
+          "axis": {
+            "grid": false,
+            "titleColor": "#eca918",
+            "tickColor": "pink",
+            "gridColor": "dimgrey",
+            "labelColor": "#eca918"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "point": false,
+        "interpolate": "linear",
+        "color": "#ecfc95f1",
+        "tooltip":true,
+        "size":{"expr": "2.5"}
+      },
+      "encoding": {
+        "y": {
+          "field": "rate_low",
+          "type": "quantitative",
+          "title": "Low Rate",
+          "scale": {"domain": [40000, 70000]},
+          "axis": {"grid": false,  "tickColor": "pink",
+            "gridColor": "dimgrey",
+            "labelColor": "#ecfc95f1", "titleColor": "#ecfc95f1"}
+        }
+      }
+    }
+  ],
+  "resolve": {"axis": {"y": "independent"}},
+  "config": {}
+}
