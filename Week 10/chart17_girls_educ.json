@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Girls of primary school age who are out-of-school, by world region, 1986 to 2019",
+      "subtitle": [
+        "Children in the official primary school age range who are not enrolled in either primary or secondary schools.",
+        "Data Source: https://ourworldindata.org/global-education",
+        ""
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "background": "whitesmoke",
+    "width": 400,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/girls_educ.csv"
+    },
+    "mark": {"type": "area", "opacity": 1},
+    "transform": [
+      {"calculate": "timeParse(datum.year, '%Y')", "as": "date1"},
+      {"filter": "datum.year>minYear"}
+    ],
+    "params": [
+      {
+        "name": "minYear",
+        "value": 1986,
+        "bind": {
+          "input": "range",
+          "min": 1986,
+          "max": 2017,
+          "step": 1,
+          "name": "Pick start year"
+        }
+      }
+    ],
+    "encoding": {
+      "x": {"field": "date1", "type": "temporal", "title": null},
+      "y": {
+        "field": "childrenoutofschoolprimaryfemale",
+        "type": "quantitative",
+        "title": null
+      },
+      "color": {
+        "field": "Region",
+        "type": "nominal",
+        "scale": {"scheme": "category20"}
+      },
+      "tooltip": [
+        {"field": "date1", "title": "Year", "type": "temporal"},
+        {
+          "field": "childrenoutofschoolprimaryfemale",
+          "title": "Number of girls out of school",
+          "type": "quantitative"
+        },
+        {"field": "Region", "title": "Region", "type": "nominal"}
+      ]
+    },
+    "config": {"axisX": {"grid": false}}
+  } 
