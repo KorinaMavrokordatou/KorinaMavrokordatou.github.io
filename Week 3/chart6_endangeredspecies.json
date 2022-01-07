@@ -1,14 +1,15 @@
 {
   "title": {
     "text": "Endangered species",
-    "subtitle": "Number of species on 'Red List'. Source: IUCN Summary Statistics",
+    "subtitle": ["Number of species on 'Red List'. Source: IUCN Summary Statistics", ""],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
     "color": "black"
   },
-  "height": 300,
-  "width": 250,
+  "height": 400,
+  "width": 400,
+  "background": "whitesmoke",
   "data": {
     "values": [
       {"Type": "Mammals", "Category": "Vertebrate", "Value": 1323},
@@ -29,24 +30,14 @@
     "x": {
       "aggregate": "sum",
       "field": "Value",
+      "color": "white",
       "title": "Number of threatened species"
     },
     "color": {
       "field": "Category",
       "type": "nominal",
-      "scale": {
-        "range": [
-          "#2e6b4f",
-          "#4db383",
-          "#71c29c",
-          "#71c29c",
-          "#71c29c",
-          "#71c29c",
-          "#71c29c",
-          "#71c29c",
-          ""
-        ]
-      },
+      "color": "white",
+      "scale": {"scheme": "goldorange"},
       "legend": {"orient": "top-right"}
     },
     "tooltip": [
@@ -55,5 +46,9 @@
       {"field": "Category"}
     ]
   },
-  "config": {}
+  "config": {
+    "view": {"stroke": "transparent"},
+    "mark": {"tooltip": null},
+    "axis": {"grid": false}
+  }
 }
