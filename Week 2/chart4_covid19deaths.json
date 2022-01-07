@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "COVID-19: UK Upper Tier Local Authority",
+    "text": "COVID-19: UK Lower Tier Local Authority",
     "subtitle": [
       "Number of new deaths of people who had had a positive test result for COVID-19",
       "and died within 28 days of the first positive test (x), Publish Date (y)"
@@ -12,15 +12,23 @@
     "color": "black"
   },
   "data": {
-    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=utla&metric=newDeaths28DaysByPublishDate&format=csv",
+    "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=newDeaths28DaysByPublishDate&format=csv",
     "format": {"type": "csv"}
   },
   "transform": [
-    {"filter": {"field": "areaName", "oneOf": ["Bradford", "Liverpool"]}}
+    {"filter": {"field": "areaName", "oneOf": ["Birmingham", "Leeds"]}}
   ],
   "height": 300,
-  "width": 300,
+  "width": 400,
   "mark": {"type": "line", "point": false},
+  "params": [
+    {
+      "name": "Area",
+      "select": {"type": "point", "fields": ["areaName"]},
+      "bind": "legend"
+    }
+  ],
+  "background": "whitesmoke",
   "encoding": {
     "x": {
       "field": "date",
@@ -37,10 +45,18 @@
     "color": {
       "field": "areaName",
       "type": "nominal",
-      "scale": {"scheme": "tableau20"},
+      "scale": {"scheme": "accent"},
       "title": null,
-      "legend": {"orient": "top-right"}
-    }
+      "legend": {
+        "orient": "top-right",
+        "labelFontSize": 12,
+        "title": "District:",
+        "titleAlign": "left",
+        "titleFontWeight": "bold"
+      }
+    },
+    "opacity": {"condition": {"param": "Area", "value": 1}, "value": 0.1}
   },
-  "config": {}
+  "config": {"axis": {"grid": false}}
 }
+
