@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "COVID-19: UK Lower Tier Local Authority",
+      "subtitle": [
+        "Number of new cases of COVID-19, measured in number of new positive tests (x), Publish Date (y);",
+        "Data Source: https://coronavirus.data.gov.uk/details/download"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/ltla_2021-12-29.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {"filter": {"field": "areaName", "oneOf": ["Birmingham", "Leeds"]}}
+    ],
+    "height": 300,
+    "width": 400,
+    "mark": {"type": "line", "point": false},
+    "params": [
+      {
+        "name": "Area",
+        "select": {"type": "point", "fields": ["areaName"]},
+        "bind": "legend"
+      }
+    ],
+    "background": "whitesmoke",
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "Publish Date",
+        "axis": {"grid": false}
+      },
+      "y": {
+        "field": "newCasesByPublishDate",
+        "type": "quantitative",
+        "title": "Number of New Deaths",
+        "axis": {"grid": false}
+      },
+      "color": {
+        "field": "areaName",
+        "type": "nominal",
+        "scale": {"scheme": "tableau20"},
+        "title": null,
+        "legend": {
+          "orient": "top-right",
+          "labelFontSize": 12,
+          "title": "District:",
+          "titleAlign": "left",
+          "titleFontWeight": "bold"
+        }
+      },
+      "opacity": {"condition": {"param": "Area", "value": 1}, "value": 0.1}
+    },
+    "config": {"axis": {"grid": false}}
+  }
