@@ -6,7 +6,8 @@
   "title": {
     "text": "International Student Statistics in UK, 2021",
     "subtitle": [
-      "Number of international students pursuing degrees in UK universities from EU and Non-EU Countries.", "Data Source: Studying-in-UK.org"
+      "Number of international students pursuing degrees in UK universities from EU and Non-EU Countries.",
+      "Data Source: Studying-in-UK.org"
     ],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
@@ -15,7 +16,7 @@
   },
   "mark": {"type": "bar", "point": false},
   "width": 450,
-  "background": "white",
+  "background": "whitesmoke",
   "height": 300,
   "encoding": {
     "xOffset": {"field": "Type"},
@@ -27,15 +28,19 @@
     },
     "x": {
       "field": "University",
-      "axis": {"orient": "bottom", "title": null, "labelAngle": -90},
+      "axis": {"orient": "bottom", "title": null, "labelAngle": -70},
       "scale": {"zero": false},
       "sort": "y"
     },
     "color": {
       "field": "Type",
-      "scale": {"domain": ["EU", "Non-EU", "Total"], "scheme": "paired"},
+      "scale": {"domain": ["EU", "Non-EU", "Total"], "scheme": "darkmulti"},
       "title": "Country:"
     }
   },
-  "config": {"view": {"stroke": "transparent"}, "legend": {"orient": "top-left"}}
+  "config": {
+    "view": {"stroke": "transparent"},
+    "legend": {"orient": "top-left"}
+  }
 }
+
