@@ -1,4 +1,5 @@
 
+
 /* This is my first proper css file */
 
   body{
@@ -27,10 +28,17 @@ h4{
 h5{
     color: rgba(255, 255, 255, 0.562);
     font-family: 'Poppins', sans-serif ;
-    font-size: 20px;
+    font-size: 30px;
     font-style: oblique 10deg;
 }
 
+h6{ color: rgb(178, 194, 214);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+  
 p{font-family: 'Poppins', sans-serif;
 color: rgb(255, 255, 255);
 }
@@ -40,7 +48,7 @@ color: rgb(255, 255, 255);
     width:auto;
     border-width: 8px;
     border-style: solid;
-    border-radius: auto;
+    border-radius: 2px;
     border-color: #a6bff5a6;
     margin: auto;
 }
