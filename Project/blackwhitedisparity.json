@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Black-White Disparity and Police killings per 100k Population, US Cities",
+      "subtitle": [ "Black-White killing rates per 100k Population and disparity in killings by police in the largest 50 cities in the US.", "Disparity for Miami could not be calculated since every person killed by this dept was either black or brown. Data on Black", "People Killed per 100k Population for Mesa, Arizona was missing thus the city has been removed manually from the sample.", "Data Source: Mapping police violence; https://mappingpoliceviolence.org/",
+        ""
+      ],
+      "subtitleFontStyle": "lighter",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black",
+      "frame":"group",
+      "subtitleColor": "#2d3959"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/disparity.csv"
+    },
+    "background": "white",
+        "width": 500,
+        "height": 170,
+        "mark": {"type": "bar", "color": "#94a8df"},
+        "encoding": {
+          "x": {"field": "City1", "type": "nominal", "axis":{"title":null}, "sort": "-y"},
+          "y": {
+            "field": "Black-White Disparity1",
+            "title": "Black-White Disparity, Rate",
+            "type": "quantitative",
+            "scale": {"domain": [0, 25]},
+            "axis": {"grid": true}
+          },
+          "tooltip": [
+            {
+              "field": "City1",
+              "title": "City",
+              "type": "nominal"
+            },
+            {
+              "field": "Black People Killed per 100k Population",
+              "title": "Black People Killed per 100k Population",
+              "type": "quantitative"
+            },
+             {
+              "field": "White People Killed per 100k Population",
+              "title": "White People Killed per 100k Population",
+              "type": "quantitative"
+            },
+            {"field": "Black-White Disparity1", "title": "Black-White Disparity", "type": "nominal"}
+          ]
+        },
+    "config": {"bar": {"width": 9}, "axis": {"ticks": false}}
+  } 
