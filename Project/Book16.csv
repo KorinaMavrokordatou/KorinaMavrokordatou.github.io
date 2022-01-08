@@ -1,0 +1,12 @@
+Sentiment,SUM,SentimentLabel
+-1 <= x < -0.8,0.3,Negative
+-0.8 <= x < -0.6,0.2,Negative
+-0.6 <= x < -0.4,1.7,Negative
+-0.4 <= x < -0.2,1.9,Negative
+-0.2 <= x < 0,24.2,Negative
+0,51.6,Neutral
+0 < x < 0.2,5.8,Positive
+0.2 <= x < 0.4,5.4,Positive
+0.4 <= x < 0.6,6.7,Positive
+0.6 <= x < 0.8,1.2,Positive
+0.8 <= x < 1,1,Positive
