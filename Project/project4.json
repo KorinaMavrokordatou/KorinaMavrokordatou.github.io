@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/support_of_movement_race.csv",
+    "format": {"type": "csv"}
+  },
+  "background": "whitesmoke",
+  "title": {
+    "text": "US Public Support of the Black Lives Matter Movement, 2020",
+    "subtitle": [
+      "The sample size consists of 292,113 responses from registered voters in the US, to the question:",
+      "'Do you support or oppose the Black Lives Matter movement?'",
+      "All numbers are expressed in percentages. Data Source: Civiqs",
+      ""
+    ],
+    "subtitleFontStyle": "lighter",
+    "subtitleFontSize": 10,
+    "subtitleColor": "black",
+    "anchor": "middle",
+    "color": "black"
+  },
+  "mark": {"type": "bar", "size": 20},
+  "selection": {
+    "Date": {
+      "type": "single",
+      "fields": ["Date"],
+      "bind": {
+        "input": "select",
+        "options": ["Jan-20", "Jun-20", "Dec-21"],
+        "name": "Month and year of survey:"
+      }
+    }
+  },
+  "transform": [{"filter": {"selection": "Date"}}],
+  "height": 100,
+  "width": 150,
+  "padding": {"top": 0, "bottom": 0, "right": 0, "left": 0},
+  "encoding": {
+    "x": {
+      "field": "View",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {"orient": "bottom", "title": null, "labelAngle": -40}
+    },
+    "y": {
+      "field": "Respondents",
+      "type": "quantitative",
+      "scale": {"domain": [0, 100]},
+      "stack": false,
+      "title": "Share of Respondends, %"
+    },
+    "facet": {
+      "field": "Race",
+      "columns": 2,
+      "title": null,
+      "spacing": 40,
+      "header": {
+        "labelColor": "black",
+        "labelFontSize": 10,
+        "labelFontWeight": "bold"
+      }
+    },
+    "color": {
+      "scale": {"range": ["#4f8f5f", "darkred", "#82cafa", "grey"]},
+      "field": "View"
+    }
+  },
+  "config": {"axisX": {"labels": true}, "legend": {"orient": "right"}}
+} 
