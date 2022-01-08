@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "white",
+    "title": {
+      "text": "Police Killings by State, 2013-2021",
+      "subtitle": [
+        "States with ranked in decreasing order of mental illness & increasing order of rates of access to care. Social media rank was obtained by a survey,",
+        "{Do you use social networks such as Facebook, Twitter or Instagram?} with responses {Yes or No} and the %of people using social media was",
+        "obtained in excel. Data Sources {https://www.mhanational.org/issues/ranking-states, https://data.census.gov} ",
+        ""
+      ],
+      "fontSize": 18,
+      "subtitleFontStyle": "lighter",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black",
+      "subtitleColor": "black"
+    },
+    "repeat": {"column": ["# People Killed", "# Black people killed"]},
+    "resolve": {"scale": {"color": "independent"}},
+    "spec": {
+      "width": 280,
+      "height": 200,
+      "data": {
+        "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/share_blacks_police.csv"
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/us-10m.json",
+              "format": {"type": "topojson", "feature": "states"}
+            },
+            "key": "id"
+          },
+          "as": "geo"
+        }
+      ],
+      "projection": {"type": "albersUsa"},
+      "mark": "geoshape",
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": {"repeat": "column"},
+          "type": "quantitative",
+          "scale": {"scheme": "lightgreyred"}
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {
+            "field": "Rate (Black People)",
+            "type": "quantitative",
+            "title": "Rate (Black People)"
+          },
+          {
+            "field": "Rate (Hispanic People)",
+            "type": "quantitative",
+            "title": "Rate (Hispanic People)"
+          },
+          {
+            "field": "Rate (Asian People)",
+            "type": "quantitative",
+            "title": "Rate (Asian People)"
+          },
+          {
+            "field": "Rate (White People)",
+            "type": "quantitative",
+            "title": "Rate (White People)"
+          }
+        ]
+      }
+    },
+    "config": {}
+  }
