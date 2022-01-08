@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/celebritiesblm.csv"
+  },
+  "background": "antiquewhite",
+  "height": 260,
+  "width": 400,
+  "title": {
+    "text": "Celebrities actively supporting the BLM movement through posts on Instagram, June 2020",
+    "subtitleFontSize": {"expr": "10"},
+    "subtitleFontStyle": "lighter",
+    "anchor": "middle",
+    "subtitle": [
+      "The posts include videos and pictures of the celebrities attending BLM protests as well as links for donation to the movement.",
+      "Data was scraped from: https://www.harpersbazaar.com.sg/life/celebrities-gone-above-beyond-support-blm/",
+      ""
+    ]
+  },
+  "mark": {"type": "bar", "color": "darkorange", "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "Celebrity",
+      "type": "nominal",
+      "axis": {"labelAngle": -50},
+      "sort":"-y",
+      "title": null
+    },
+    "y": {
+      "field": "Instagram Following (Millions)",
+      "type": "quantitative",
+      "title": "Instagram Followers, Million"
+    }
+  },
+  "config": {
+    "axisX": {"grid": false},
+    "axisY": {"gridColor": "white", "gridOpacity": 0.6},
+    "axis": {"titleFontStyle": "lighter"}
+  }
+}
