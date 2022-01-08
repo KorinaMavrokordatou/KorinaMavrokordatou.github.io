@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Twitter sentiment analysis of the #BlackLivesMatter",
+      "subtitle": [
+        "Data was collected from Kaggle. A total number of 1000 tweets were classified into positive (>0), negative (<0)", "and neutral (0) sentiment. The 'Frequency' variable is a percentage and values add up to 100%.","Data Source: https://www.kaggle.com/yash612/black-lives-matter-twitter-dataset; Kaggle datasets.",
+        ""
+      ],
+      "subtitleFontStyle": "lighter",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/Book17.csv"
+    },
+    "width": 400,
+    "height": 300,
+    "background": "antiquewhite",
+    "mark": {"type": "bar", "cornerRadius": {"expr": "3"}, "width":{"expr": "26"}, "tooltip":true},
+    "encoding": {
+      "x": {
+        "field": "Sentiment",
+        "type": "nominal",
+        "sort":"",
+        "axis": {"labelAngle": -40},
+        "title": "Ruled-Based Sentiment"
+      },
+      "y": {"field": "SUM", "type": "quantitative", "title": "Frequency"},
+      "color": {
+        "field": "SentimentLabel", 
+        "scale":{ "range": ["darkred", "#929394", "#82cafa"]},
+        "legend":{"title":"Sentiment Label:"}
+      }
+    },
+    "config": {"axisX": {"grid": false}, "axisY": {"gridColor": "white", "gridOpacity": 0.6}, "axis": {"titleFontStyle": "lighter"}}
+  }
