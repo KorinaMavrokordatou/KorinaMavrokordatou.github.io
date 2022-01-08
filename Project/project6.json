@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Reddit Comments Sentiment Analysis",
+    "subtitle": [
+      "Sentiment analysis of the top 10 scored comments on Subreddit 'blacklivesmatter'. All data was scraped from Reddit's API",
+      "using PRAW, nltk and Textblot in python.",
+      ""
+    ],
+    "subtitleFontStyle": "lighter",
+    "subtitleFontSize": 10,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/reddit_comment_analysis3.csv"
+  },
+  "background": "antiquewhite",
+  "width": 400,
+  "height": 100,
+  "mark": {"type": "bar", "color": "#1da1f8", "size": {"expr": "9"}},
+  "encoding": {
+    "xOffset": {"field": "Sentiment"},
+    "x": {
+      "field": "Comment",
+      "type": "nominal",
+      "sort":"-y",
+      "axis": {"title": "", "grid": false, "labelAngle": -50}
+    },
+    "facet": {
+      "field": "Method of analysis",
+      "columns": 1,
+      "title": null,
+      "spacing": 40,
+      "header": {
+        "labelColor": "black",
+        "labelFontSize": 10,
+        "labelFontWeight": "bold"
+      }
+    },
+    "color": {
+      "field": "Sentiment",
+      "scale": {
+        "range": ["darkred", "#929394", "#82cafa", "darkred", "#013794"]
+      },
+      "title": "Sentiment:"
+    },
+    "y": {
+      "field": "Number of comments",
+      "type": "quantitative",
+      "axis": {"tickCount": 3, "grid": true}
+    },
+    "tooltip": [
+      {"field": "Comment", "title": "Submission Title", "type": "nominal"},
+      {
+        "field": "Method of analysis",
+        "title": "Method of analysis",
+        "type": "nominal"
+      },
+      {
+        "field": "Number of comments",
+        "title": "Comments",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {
+    "bar": {"height": 50, "width": 14},
+    "axisX": {"grid": false},
+    "axisY": {"gridColor": "white", "gridOpacity": 0.6},
+    "axis": {"titleFontStyle": "lighter"}
+  }
+}
