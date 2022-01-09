@@ -17,7 +17,7 @@
   "repeat": {"column": ["Rate (White People)", "Rate (Black People)"]},
   "resolve": {"scale": {"color": "independent"}},
   "spec": {
-    "width": 280,
+    "width": 320,
     "height": 200,
     "data": {
       "url": "https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Project/share_blacks_police.csv"
