@@ -52,6 +52,11 @@
           "title": "Rate (Black People)"
         },
         {
+          "field": "Rate (White People)",
+          "type": "quantitative",
+          "title": "Rate (White People)"
+        },
+        {
           "field": "# People Killed",
           "type": "quantitative",
           "title": "Number of people killed"
@@ -60,11 +65,6 @@
           "field": "# Black people killed",
           "type": "quantitative",
           "title": "Number of Black people killed"
-        },
-        {
-          "field": "Rate (White People)",
-          "type": "quantitative",
-          "title": "Rate (White People)"
         }
       ]
     }
