@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<!-- Korina Mavrokordatou, Data Science 2021 -->
+
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+<head>
+
+
+</style> 
+  <link rel="stylesheet" href="index.css">
+   <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=FreeMono&display=swap');
+        </style>
+  
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+</head>
+
+<div id="loader">
+  <div id="one"></div>
+  <div id="two"></div>
+</div>
+
+<div id="loadermessage">Preparing the data...</div>
+    
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loadermessage").style.display = "none";  
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
+<body>
+
+    <div class="topnav">
+      <a href="index.html">Home</a>
+        <a class="active" href="portfolio.html">Portfolio</a>
+        <a href="project.html">Project</a>
+        <a href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io">Github</a>
+      </div>
+
+  <title>Korina Mavrokordatou - Portfolio</title>
+
+ 
+    <h1>Korina Mavrokordatou: Data Visualisation Portfolio</h1>
+    <h3><strong>ECON30006 | Student Number: 1941182</strong></h3>
+    
+
+    <!--Navigation bar and title-->
+
+  <body>
+    <h5> Week 1: Introduction/ Embedding </h5>
+    <h6> Embed three charts, two that are given to you in class. One (as homework) taken from the repository of charts that drive www.rapidcharts.io:</h6>
+
+    <container class="container">
+
+    <!--Chart 1 -->
+
+    <div id="text1">
+      <br>
+<h4>Covid-19 Cases by region, UK</h4>
+<p>This is my first chart, an interactive line chart <br> showing Covid-19 cases in the UK by region embeded from class. </p>
+<p><a class="textLink" href="https://api.coronavirus.data.gov.uk/v2/data?areaType=region&metric=newCasesByPublishDate&format=csv" target="_blank">Data url</a></p>
+<br> 
+  <div class="chart" id="chart1">
+      <script>
+        //this is my first chart
+        var myChart1 = "Week 1/chart1_covidUKRegion.json";
+        //yes
+        vegaEmbed('#chart1', myChart1);
+      </script>
+  </div>
+</div>
+
+
+<!--Chart 2 -->
+<div id="text2">
+<h4>Labour Productivity, UK</h4>
+<p>This is my second chart, a line chart showing <br> UK labour productivity from 1971 to 2021 embeded from class.</p>
+<p><a class="textLink" href="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/usa/data_USsocioEconomic.csv" target="_blank">Data url</a></p>
+<br> 
+<div class="chart" id="chart2">
+    <script>
+      var myChart2 = "Week 1/chart2_ukProductivity.json";
+      vegaEmbed('#chart2', myChart2);
+    </script>
+</div>
+</div>
+
+  <!--Chart 3 -->
+  <div id="text3">
+  <h4>Gun Deaths and Income, US states</h4>
+  <p>This is my third chart, a scatter diagram showing the relationship between median income <br> and firearm deaths in the US embeded the repository that drive <a class="textLink" href="https://rapidcharts.io/" target="_blank">www.rapidcharts.io</a>.</p>
+  <p><a class="textLink" href="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/usa/data_USsocioEconomic.csv" target="_blank">Data url</a></p>
+<div class="chart" id="chart3">
+    <script>
+      var myChart3 = "Week 1/chart3_gundeaths_income.json";
+      vegaEmbed('#chart3', myChart3);
+    </script>
+</div>
+</div>
+    </container>
+
+    <h5> Week 2: Hosting data </h5>
+    <h6> Embed two charts of your own design: (a) from a given API, (b) from the same/related data saved to your GitHub:</h6>
+    <container class="container">
+
+ <!--Chart 4 -->
+ <div id="text">
+ <h4>Number of New Deaths by Covid-19, UK</h4>
+ <p>This is my fourth chart which consists of 2 lines for Birmingham and Leeds, <br> the two most populated districts of England, from gov.uk's coronavirus API <br> accessed through <a class="textLink" href="https://coronavirus.data.gov.uk/details/download" target="_blank">https://coronavirus.data.gov.uk/details/download</a>.<br><br></p>
+ <p><a class="textLink" href="https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=newDeaths28DaysByPublishDate&format=csv" target="_blank">Data url</a></p>
+ <div class="chart" id="chart4">
+     <script>
+       var myChart4 = "Week 2/chart4_covid19deaths.json";
+       vegaEmbed('#chart4', myChart4);
+     </script>
+ </div>
+</div>
+
+<div id="text2">
+ <!--Chart 5 -->
+ <h4>Number of New Cases of Covid-19, UK</h4>
+ <p>This is my fourth chart a complementary chart for Birmingham and Leeds, <br> showing the number of new cases. Data has also been accessed from <br> through <a class="textLink" href="https://coronavirus.data.gov.uk/details/download" target="_blank">https://coronavirus.data.gov.uk/details/download</a> but has been <br> downloaded and stored on my github page as a csv file.</p>
+ <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/ltla_2021-12-29.csv" target="_blank">Data url</a></p>
+ <div class="chart" id="chart5">
+     <script>
+       var myChart5 = "Week 2/chart5_covidcases.json";
+       vegaEmbed('#chart5', myChart5);
+     </script>
+ </div>
+</div>
+</container>
+
+<h5> Week 3: Editing data, writing JSON by hand </h5>
+<h6>Two more charts. One where you change (add an observation); One where the data is “in-line” JSON that you write:</h6>
+<container class="container">
+    
+<!--Chart 6 -->
+<div id="text">
+ <h4>Number of species on "red list"</h4>
+ <p>This is my sixth chart, a bar chart showing endangered species. <br> The data is "in-line" JSON, which I have manually written. <br> The data (csv file) was downloaded from RDeconomist on Github. <br> Then, using Vega-lite online, I recreated the chart.</p>
+ <p>Data manually written.</p>
+ <div class="chart" id="chart6">
+     <script>
+       var myChart6 = "Week 3/chart6_endangeredspecies.json";
+       vegaEmbed('#chart6', myChart6);
+     </script>
+ </div>
+</div>
+
+
+     <!--Chart 7 -->
+     <div id="text2">
+ <h4>International Student Statistics, UK</h4>
+ <p>This is my seventh chart, a bar chart showing the number of international students<br> studying in the UK. The data was collected from <a class="textLink" href="https://www.studying-in-uk.org/international-student-statistics-in-uk/" target="_blank">"Studying-in-UK.org"</a> <br> and I have added data for the University of Bristol and the <br> University of Bath from another source, in excel. </p>
+ <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/chart7_data.csv" target="_blank">Data url</a></p>
+ <div class="chart" id="chart7">
+     <script>
+       var myChart7 = "Week 3/chart7_internationalstudentsuk(2).json";
+       vegaEmbed('#chart7', myChart7);
+     </script>
+ </div>
+</div>
+</container>
+
+<h5> Week 4: API driven charts </h5>
+<h6>Embed two charts of your own design from two separate APIs that you sign up for & gain access to:</h6>
+<container class="container">
+    
+         <!--Chart 8 -->
+         <div id="text">
+ <h4>Goals Scored in Football, Cyprus</h4>
+ <p>This is my eighth chart, a scatter plot showing the number of goals scored <br> in Cyprus 1st division league. The chart was created using an API key <br> from SportsDataApi for which I requested access for. I manipulated the API link <br> and changed the time-period to include the last season (21/08/2021-23/11/2021).</p>
+ <h6>Note: Visualisation does not work in Safari but works fine in Google Chrome browser. <br> I tried googling the problem but no solutions/reasons for the problem were found.</h6>
+ <p><a class="textLink" href="https://app.sportdataapi.com/api/v1/soccer/matches?apikey=a2bf7e20-4bdc-11ec-95b0-3ded6d4e1aa4&season_id=2109" target="_blank">Data url</a></p>
+ <div class="chart" id="chart8">
+     <script>
+       var myChart8 = "Week 4/chart8_cyprusfootball.json";
+       vegaEmbed('#chart8', myChart8);
+     </script>
+ </div>
+</div>
+    
+             <!--Chart 9 -->
+             <div id="text2">
+ <h4>Ozone concentration, Portugal</h4>
+ <p>Pollution data using satellite imagary from emissions API. The chart makes two <br> separate API calls, one to get Portugal data, and one to get the data <br> for a specific point, in this case the coordinates for the city of Lisbon. No API key was required for access.</p>
+ <p><a class="textLink" href="https://api.v2.emissions-api.org/api/v2/ozone/average.json?country=pt&begin=2010-02-01&end=2030-01-01" target="_blank">Data url</a> for Portugal.</p>
+ <p><a class="textLink" href="https://api.v2.emissions-api.org/api/v2/ozone/average.json?point=38.7222%2C9.1393&begin=2019-02-10&end=2030-01-01&limit=100&offset=0"  target="_blank">Data url</a> for Lisbon.</p>
+ <br>
+ <div class="chart" id="chart9">
+     <script>
+       var myChart9 = "Week 4/chart9_ozonepollution.json";
+       vegaEmbed('#chart9', myChart9);
+     </script>
+ </div>
+</div>
+
+             <!--Chart coinapi -->
+             <div id="text3">
+              <h4>Coin API, World</h4>
+              <p>Bitcoin exchange high and low rates data. The chart makes an API call using a unique API key, <br> from coinapi from which I requested access for. </p>
+              <p><a class="textLink" href="https://rest.coinapi.io/v1/exchangerate/BTC/USD/history?period_id=8HRS&time_start=2021-10-01T00:00:00&limit=100&include_empty_items=false&apikey=974BD54A-0079-4734-8F1F-B97C4C2FDC3C"  target="_blank">Data url</a></p>
+              <br>
+              <div class="chart" id="chart9b">
+                  <script>
+                    var myChart9b = "Week 4/coinapibitcoin.json";
+                    vegaEmbed('#chart9b', myChart9b);
+                  </script>
+              </div>
+             </div>
+
+</container>
+
+<h5> Week 5: API fetch </h5>
+<h6>Download code from an API using fetch in Python/Colab and chart this. Uses a loop so that you can create a dashboard:</h6>
+<container class="container">
+
+    <div id="text">
+        <p> These charts are US based data that shows the trend of Federal Funds Effective Rate, Unemployment Rate, Real Gross National Product 
+           and Industrial Production Total Index. The data for these were batch downloaded using a loop 
+            in <a class="textLink" href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/blob/main/Week%205/FRED_data.ipynb" target="_blank"> Colab</a>. 
+        </p> 
+    </div>
+
+<!-- FRED Data using an API fetch in python: FEDFUNDS -->
+<div id="text">
+  <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/data_FRED-FEDFUNDS.json"  target="_blank">Data url</a></p>
+<div class="chart" id="chart10">
+  <script>
+    var myChart10 = "Week 5/chart10_FEDFUNDS.json";
+    vegaEmbed('#chart10', myChart10);
+  </script>
+</div>
+</div>
+
+<!-- FRED Data using an API fetch in python: UNRATE -->
+<div id="text2">
+<p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/data_FRED-UNRATE.json"  target="_blank">Data url</a></p>
+
+<div class="chart" id="chart11">
+  <script>
+    var myChart11 = "Week 5/Chart11_FRED-UNRATE.json";
+    vegaEmbed('#chart11', myChart11);
+  </script>
+</div>
+</div>
+
+<!-- FRED Data using an API fetch in python: GNPCA -->
+<div id="text3">
+  <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/data_FRED-GNPCA.json"  target="_blank">Data url</a></p>
+<div class="chart" id="chart12">
+  <script>
+    var myChart12 = "Week 5/chart12-FRED_GNPCA.json";
+    vegaEmbed('#chart12', myChart12);
+  </script>
+</div>
+</div>
+
+<!-- FRED Data using an API fetch in python: INDPRO -->
+<div id="text4">
+  <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/data_FRED-INDPRO.json"  target="_blank">Data url</a></p>
+<div class="chart" id="chart13">
+  <script>
+    var myChart13 = "Week 5/chart13_FRED_INDPRO.json";
+    vegaEmbed('#chart13', myChart13);
+  </script>
+</div>
+</div>
+
+</container>
+
+<h5> Week 7: Data Scrapers </h5>
+<h6>Build a scraper in Colab, save and chart the results:</h6>
+<container class="container">
+      <div id="text">
+     <h4>University Overall Scores, UK</h4>
+     
+     <p>This chart was created by scraping data from <a class="textLink" href=https://www.alzheimer-europe.org/dementia/prevalence-dementia-europe target="_blank"> Prevalence of dementia in Europe </a> using Google <a class="textLink" href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/blob/main/dementia_scraping.ipynb" target="_blank"> Colab</a>, where I<br>recreated a table for the estimated prevalence of dementia in different countries in Europe, in 2018 and 2050. </p>
+     <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/dementia_data%20(1).csv" target="_blank">Data url</a></p>
+<div class="chart" id="chart14">
+  <script>
+    var myChart14 = "Week 7/dementia_europe.json";
+    vegaEmbed('#chart14', myChart14);
+  </script>
+</div>
+</div>
+</container>
+
+<h5> Week 8: Data Stories: Talking Economics </h5>
+<h6>Attend one (or more) mornings of Talking Economics. After this construct a chart that would (a) support or (b) refute an argument that is made there:</h6>
+<container class="container">
+     <div id="text">
+     <h4>Coronavirus and Depression in Adults by Age and Gender, UK</h4>
+
+     <p>This chart was created to support Professor's Sarah Smith statement that "During the pandemic, women’s <br> and especially younger women's mental health suffered more than men’s mental health". Data was <br> downloaded from the <a class="textLink" href="https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/articles/coronavirusanddepressioninadultsgreatbritain/januarytomarch2021" target="_blank"> ONS</a> and it is clear that the group with the highest proportion of adults experiencing <br>some form of depression is young women, aged 16-29.</p>
+     <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/depressionstats.csv" target="_blank">Data url</a></p>
+<div class="chart" id="chart15">
+  <script>
+    var myChart15 = "Week 8/chart15_depressionstats.json";
+    vegaEmbed('#chart15', myChart15);
+  </script>
+</div>
+</div>
+</container>
+
+<h5> Week 9: Advanced Analytics </h5>
+<h6>Chart data from two separate sources. Plot these data using a more advanced technique (correlation, regression, distribution, etc):</h6>
+<container class="container">
+     <div id="text1">
+     <h4>Crime and Ethnic Fractionalization Indices, World</h4>
+     <p>This chart was created from 2 different sources, merged in Stata. It examines whether countries which  <br>are more ethnically diverse experience higher crime rates. The regression was performed in Google <a class="textLink" href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/blob/main/Week%209/ef_crime_regression.ipynb" target="_blank">Colab.</a></p>
+     <p><a class="textLink" href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/blob/main/Week%209/ef_index.do" target="_blank">Dofile for Ethnic fractionalization Data</a></p>
+     <p><a class="textLink" href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/blob/main/Week%209/crime_index.do" target="_blank">Dofile for Crime Rates Data</a></p>
+     <p><a class="textLink" href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/blob/main/Week%209/merging.do" target="_blank">Dofile for Merging</a></p>
+     <p><a class="textLink" href="https://github.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/blob/main/Week%209/ef_crime_regression.ipynb" target="_blank" target="_blank">Google Colab Notebook</a></p>
+
+<div class="pngchart">
+    <img src  = "ef_crime_regression.png" />
+</div>
+</div>
+</container>
+
+<h5> Week 10: Interactivity </h5>
+<h6>Build and embed an interactive chart (sliders, clickable legends, drop down boxes, zoom and scroll etc):</h6>
+<container class="container">
+     <div id="text">
+     <h4>Girls of primary school age who are out-of-school, World</h4>
+
+     <p>This chart was built on vegalite. I have added a binder <br> that allows you to select a start date and a tooltip <br> which shows the number of girls out of school for every region,<br> and year. </p>
+     <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/girls_educ.csv" target="_blank">Data url</a></p>
+
+<div class="chart" id="chart17">
+  <script>
+    var myChart17 = "Week 10/chart17_girls_educ.json";
+    vegaEmbed('#chart17', myChart17);
+  </script>
+</div>
+</div>
+
+<div id="text2">
+  <h4>Girls of primary school age who are out-of-school, World</h4>
+  <p>This is my second interactive chart, a complementary chart with <br> value labels for each region and year. <br> <br> </p>
+  <p><a class="textLink" href="https://raw.githubusercontent.com/KorinaMavrokordatou/KorinaMavrokordatou.github.io/main/Week%2010/girls_educ_2.csv" target="_blank">Data url</a></p>
+
+  <br> 
+  <div class="chart" id="chart18">
+      <script>
+        var myChart18 = "Week 10/chart18_girls_educ.json";
+        vegaEmbed('#chart18', myChart18);
+      </script>
+  </div>
+  </div>
+
+</container>
+
+<br>
+
+</body>
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
+
+</html>
