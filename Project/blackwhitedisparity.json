@@ -21,7 +21,7 @@
   },
   "background": "white",
   "width": 500,
-  "height": 200,
+  "height": 210,
   "mark": {"type": "bar", "color": "#94a8df"},
   "encoding": {
     "x": {
