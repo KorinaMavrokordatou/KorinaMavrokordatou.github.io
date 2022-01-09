@@ -6,6 +6,7 @@ cd "/Users/korinamavrokordatou/Desktop/BSc Econ- Year 3/Data Science/project"
 capture log close 
 
 insheet using "frommaster.csv", clear 
+//this was obtained from vegamaster data 
 
 drop population engineers hurricanes
 
