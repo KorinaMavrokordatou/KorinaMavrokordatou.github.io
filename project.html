@@ -70,19 +70,19 @@
     <container class="container">
       <div id="text">
        <h2>Analysis of the black lives matter movement through social media, 2020-2021</h2>
-       <p> Examined through Reddit, Twitter and Instagram data.</p>
+       <p> Examined through Reddit and Twitter data.</p>
       </div>
       </container>
 
     <br>
     <div id="text">
     <h5> Introduction</h5>
-    <h6>The BlackLivesMatter Movement emerged in July 2013, with the use of the hashtag #BlackLivesMatter on social media after George Zimmerman; a neighborhood watch volunteer who killed 17-year old African-American 
-        Trayvon Martin was acquitted. The movement returned to national headlines in June2020, following the murder of George Floyd by Minneapolis police officer Derek Chauvin. Circulation of the hashtag #BlackLivesMatter 
-        on social media started many conversations and brought attention to the frequency of police shootings of civilians.
-        Through this project, I aim to investigate: <br><br>
-        (a)	why the BlackLivesMatter movement is necessary; <br>
-        (b)	how have people expressed their opinions through Social Media. <br>
+    <h6>The BlackLivesMatter Movement emerged in July 2013, with the use of the hashtag #BlackLivesMatter on social media after George Zimmerman; a neighborhood watch volunteer who killed 17-year old African-American Trayvon Martin was acquitted. 
+      The movement returned to national headlines in June 2020, following the murder of George Floyd by Minneapolis police officer Derek Chauvin. Circulation of the hashtag #BlackLivesMatter on social media started many conversations and brought 
+      attention to the frequency of police shootings of civilians. Through this project, I aim to investigate: <br> 
+     (a) why the BlackLivesMatter movement is necessary;
+     (b) how have people expressed their opinions through Social Media.
+ <br>
       </h6>
       </div>
     
@@ -90,12 +90,12 @@
 <container2 class="container2">
   <div id="text">
     <h5>(a) Why is the movement necessary? </h5>
-    <h6> During 2013-2021, police have killed 9879 people, with 98.3% of killings not resulting in officers being charged with crime. Figure1 gathers evidence from America's largest 50 cities to prove that crime rates 
-      do not determine police violence rates. The regression combines data from 2 different sources; <a class="textLink" href="https://mappingpoliceviolence.org" target="_blank"> Mapping Police Violence </a> and 
-      <a class="textLink" href="https://crime-data-explorer.fr.cloud.gov/pages/downloads" target="_blank"> Federal Bureau of Investigation, Crime Data Explorer </a> both downloaded as csv files, for performing a regression of violent crime rates on police killings rates.
-      The regression yields an R-squared value of 0.035 and a coefficient which is not significant at 5% level; proving that there is no correlation between the 2 variables. Figure 2 then shows Black-White disparity in the same cities for 2013-2021; with values as high 
+    <h6> During 2013-2021, police have killed 9879 people, with 98.3% of killings resulting to officers being acquitted. Figure 1 gathers evidence from US largest 50 cities to prove that crime rates 
+      do not determine police violence rates. I combined data from 2 different sources; <a class="textLink" href="https://mappingpoliceviolence.org" target="_blank"> Mapping Police Violence </a> and 
+      <a class="textLink" href="https://crime-data-explorer.fr.cloud.gov/pages/downloads" target="_blank"> Federal Bureau of Investigation, Crime Data Explorer </a> both downloaded as csv files, to performing a regression of violent crime rates on police killings rates.
+      The regression yields an R-squared value of 0.035 and a coefficient which is not significant at 5% level, proving that there is no correlation between the 2 variables. Figure 2 then shows Black-White disparity in the same cities for 2013-2021 with values as high 
       as 23.5. Data is again downloaded from <a class="textLink" href="https://mappingpoliceviolence.org" target="_blank"> Mapping Police Violence</a>. The disparity is also depicted in Figure 3; where it is clear that Black people are killed at much higher rates than 
-      white people, given the population structure. The data used was fairly easy to access, but a lot of cleaning was required; which was done in Stata. 
+      white people, given the population structure. The data used was fairly easy to access, but a lot of cleaning was required, which was done in Stata. 
       The main challenge faced was the merging of the data which required exactly matching the states; a fairly difficult task when they are not identically formatted. 
     </h6>
   </div>
@@ -149,19 +149,18 @@
 <container2 class="container2">
 <div id="text">
 <h5> (b) Social Media data analysis: </h5>
-<h6> This was the most challenging part of the project; since data from Social Media platforms is not as easily accessible. In order to fetch data from Reddit; I had to create a developer’s account and obtain a unique 
-  client_id and client_secret, which were used as API keys. I then used PRAW, to fetch the data; and pandas data-frame to store the data. Further analysis was conducted using TextBlot and Vader libraries to perform a sentiment
-   analysis on the comments of the top 10-scored Reddit posts under the subreddit ‘r/BlackLivesMatter’. I used both libraries since I wanted to test how each one performs. Through research I found out that Textblot also includes 
-   subjectivity parameters whereas Vader is better for analyzing text with special characters and emojis. I initially signed up for all Facebook, Twitter and Reddit APIs but the FacebookAPI does not allow fetching for 
-   specific words and my Twitter developer application was suspended by mistake. Twitter support did not respond to reactivate my key until the 5th of January. Hence, the Twitter sentiment dataset was downloaded from Kaggle, where 
-   the TextBlot library was used. However, the dataset required a lot of cleaning, which was performed in Stata. <br>
-<br> 
-  Reddit’s score represents the number of upvotes minus downvotes, hence as seen in Figure4, the movement gained a lot of positive attention during 2021, with the top-scored post at 15864. Reading through the top-20 scored 
-  posts it’s obvious that the tone varies, from positive to negative. The complementary Figure5 supports this statement exhibiting much variation in the comment section of the posts examined; with the majority of the posts 
-  having a neutral tone. Both Textblot and Vader calculate higher numbers of positive sentiment tweets than negative ones, however this is a small sample and hence in order to yield conclusive results, a bigger sample 
-  should have been examined. Hence, the analysis is expanded by including the Twitter dataset, consisting of 1000 tweets shown in Figure6. The Twitter dataset supports the view that the movement brought about many toxic and hateful 
-  comments, evident in Figure6 where the number of negative sentiment tweets is much higher than the number of positive ones. 
-  <br>
+<h6> This was the most challenging part of the project; since data from Social Media platforms is not as easily accessible. In order to fetch data from Reddit; I had to create a developer’s account and 
+  obtain a unique client_id and client_secret; used as API keys. I then used PRAW, to fetch the data and pandas data-frame to store the data. Further analysis was conducted using TextBlot and Vader libraries 
+  to perform a sentiment analysis on the comments of the top 10-scored Reddit posts under the subreddit ‘r/BlackLivesMatter’. I used both libraries since I wanted to test how each one performs. Through 
+  research I found that Textblot also includes subjectivity parameters whereas Vader is better for analyzing text with special characters and emojis. I initially signed up for all Facebook, Twitter and Reddit 
+  APIs but the FacebookAPI does not allow fetching for specific words and my Twitter developer application was suspended by mistake. Twitter-support did not respond to reactivate my key until the 5th of January.
+  Hence, the Twitter sentiment dataset was downloaded from Kaggle, where the TextBlot library was used. However, the dataset required a lot of cleaning, performed in Stata. <br>
+<br>
+Reddit’s score represents the number of upvotes minus downvotes, hence as seen in Figure 4, the movement gained a lot of positive attention, with the top-scored post at 15864. Reading through the top-20 scored 
+  posts it’s obvious that the tone varies, from positive to negative. Figure 5 supports this statement, displaying much variation in the comment section of the posts examined; with the majority of the posts having 
+  a neutral tone. Both Textblot and Vader calculate higher numbers of positive sentiment tweets than negative ones, however this is a small sample and hence in order to yield conclusive results, a bigger sample 
+  should have been examined. Hence, the analysis is expanded by including the Twitter dataset, consisting of 1000 tweets shown in Figure6. The Twitter dataset supports the view that the movement brought about
+  many toxic and hateful comments, evident in Figure 6 where negative-sentiment tweets are more than positive ones.
 
   </h6>
 </div>
@@ -221,10 +220,11 @@
 <container2 class="container2">
   <div id="text">
 <h5> Conclusion </h5>
-<h6> To conclude, the BlackLivesMatter movement sparked a lot of controversy among US citizens and became the source of hateful comments circulating social media platforms. Although the movement is really important, it is unclear whether the social-media 
-  approach is enough to provide a consistent barrier against racism in the US. This is evident from Figure7; showing that although support for BlackLivesMatter increased during the George-Floyd Protests (June2020), a year and a half later, 
-  support declined; especially in the White group, where share of respondents opposing the movement was even higher than in January2020. This raises a question of whether support was raised due to it being a “trend” and whether people took this movement
-  an opportunity to argue through social media. The dataset for Figure7 was obtained from <a class="textLink" href="https://civiqs.com/results/black_lives_matter?uncertainty=true&annotations=true&zoomIn=true" target="_blank"> Civiqs </a> 
+<h6> To conclude, the BlackLivesMatter movement sparked a lot of controversy among US citizens and became the source of hateful comments circulating social media platforms. 
+  Although the movement is really important, it is unclear whether the social-media approach is enough to provide a consistent barrier against racism in the US. Figure 7 displays
+  that although support for BlackLivesMatter increased during the George-Floyd Protests (June2020), a year and a half later, support declined; especially in the White group, where 
+  share of respondents opposing the movement was even higher than in January 2020. This raises a question of whether support was raised due to it being a “trend” and whether people 
+  took this movement an opportunity to attack certain beliefs. The dataset for Figure7 was obtained from <a class="textLink" href="https://civiqs.com/results/black_lives_matter?uncertainty=true&annotations=true&zoomIn=true" target="_blank"> Civiqs </a> 
   and formatted in Excel. </h6>
 </div>
 </container2>
